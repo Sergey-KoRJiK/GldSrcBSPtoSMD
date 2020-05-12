@@ -2,7 +2,9 @@ Copyright (c) 2020 Sergey Smolovsky, Belarus
 email: sergeysmol4444@mail.ru
 
 # This program created for export GldSrc BSP maps (only brush geometry) to static SMD files.
-Support texture coordinates and names (texture group names have postfix .bmp)
+Support texture coordinates and names (texture group names have postfix .bmp).
+Support world and entity brushes. 
+Export faces with all textures, include tool textures like trigger, sky, origin and ect.
 
 ### For download compiled standalone tool, click [here](https://github.com/Sergey-KoRJiK/GldSrcBSPtoSMD/raw/master/GoldSrcBSPtoSMD.exe)
 
