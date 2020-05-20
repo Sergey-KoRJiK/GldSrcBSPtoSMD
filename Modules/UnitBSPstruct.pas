@@ -159,6 +159,7 @@ begin
   if (Map.MapFileSize < MAP_HEADER_SIZE) then
     begin
       Map.LoadState:=erMinSize;
+      CloseFile(MapFile);
       Exit;
     end;
 
@@ -166,10 +167,13 @@ begin
   if (Map.MapHeader.nVersion <> MAP_VERSION) then
     begin
       Map.LoadState:=erBadVersion;
+      CloseFile(MapFile);
+      Exit;
     end;
   if (GetEOFbyHeader(Map.MapHeader) < Map.MapFileSize) then
     begin
       Map.LoadState:=erBadEOFbyHeader;
+      CloseFile(MapFile);
       Exit;
     end;
 
@@ -205,6 +209,7 @@ begin
   else
     begin
       Map.LoadState:=erNoEntData;
+      CloseFile(MapFile);
       Exit;
     end;
 
@@ -218,6 +223,7 @@ begin
   else
     begin
       Map.LoadState:=erNoPlanes;
+      CloseFile(MapFile);
       Exit;
     end;
 
@@ -244,6 +250,7 @@ begin
   else
     begin
       Map.LoadState:=erNoTextures;
+      CloseFile(MapFile);
       Exit;
     end;
 
@@ -257,6 +264,7 @@ begin
   else
     begin
       Map.LoadState:=erNoVertex;
+      CloseFile(MapFile);
       Exit;
     end;
 
@@ -270,6 +278,7 @@ begin
   else
     begin
       Map.LoadState:=erNoTexInfos;
+      CloseFile(MapFile);
       Exit;
     end;
 
@@ -283,6 +292,7 @@ begin
   else
     begin
       Map.LoadState:=erNoFaces;
+      CloseFile(MapFile);
       Exit;
     end;
 
@@ -296,6 +306,7 @@ begin
   else
     begin
       Map.LoadState:=erNoEdge;
+      CloseFile(MapFile);
       Exit;
     end;
 
@@ -309,6 +320,7 @@ begin
   else
     begin
       Map.LoadState:=erNoSurfEdge;
+      CloseFile(MapFile);
       Exit;
     end;
 
@@ -322,6 +334,7 @@ begin
   else
     begin
       Map.LoadState:=erNoBrushes;
+      CloseFile(MapFile);
       Exit;
     end;
 
