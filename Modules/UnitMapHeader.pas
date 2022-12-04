@@ -1,7 +1,5 @@
 unit UnitMapHeader;
 
-// Copyright (c) 2020 Sergey Smolovsky, Belarus
-
 interface
 
 uses
