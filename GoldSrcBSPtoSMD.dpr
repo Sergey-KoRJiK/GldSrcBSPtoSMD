@@ -1,7 +1,5 @@
 program GoldSrcBSPtoSMD;
 
-// Copyright (c) 2020 Sergey Smolovsky, Belarus
-
 {$APPTYPE CONSOLE}
 
 uses
@@ -29,8 +27,6 @@ begin
   Writeln('Support export entity and world brushes with all textures,');
   Writeln('include tool textures like sky, trigger and ect. Support');
   Writeln('export texture names and coords.');
-  Writeln('   Copyright (c) 2020 Sergey Smolovsky, Belarus');
-  Writeln('   email: sergeysmol4444@mail.ru');
   Writeln;
   FileName:=ParamStr(1);
   if (FileName <> '') then
